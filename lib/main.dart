@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 CircleAvatar(
                   backgroundImage: AssetImage('images/avatar.png'),
-                  maxRadius: 60,
+                  maxRadius: 80,
                 ),
               ],
             ),
