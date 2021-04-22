@@ -33,18 +33,18 @@ class _MyHomePageState extends State<MyHomePage> {
               // crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 CircleAvatar(
-                  backgroundColor: Colors.amber[300],
+                  backgroundImage: AssetImage('images/avatar.png'),
                   maxRadius: 60,
-                  // backgroundColor: Colors.blue,
                 ),
               ],
             ),
             SizedBox(
               child: Divider(
+                thickness: 1,
                 color: Colors.white,
               ),
               height: 50,
-              width: 250,
+              width: 210,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -75,12 +75,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                       decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black,
-                            blurRadius: 1.5,
-                            spreadRadius: 1,
+                            color: Colors.blueGrey,
+                            blurRadius: 15,
+                            spreadRadius: 0.1,
                             offset: Offset.zero,
                           ),
                         ],
@@ -113,12 +114,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                       decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black,
-                            blurRadius: 1.5,
-                            spreadRadius: 1,
+                            color: Colors.blueGrey,
+                            blurRadius: 15,
+                            spreadRadius: 0.1,
                             offset: Offset.zero,
                           ),
                         ],
@@ -151,12 +153,13 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                       decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black,
-                            blurRadius: 1.5,
-                            spreadRadius: 1,
+                            color: Colors.blueGrey,
+                            blurRadius: 15,
+                            spreadRadius: 0.1,
                             offset: Offset.zero,
                           ),
                         ],
