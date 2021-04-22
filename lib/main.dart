@@ -18,6 +18,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String githubLink = 'github.com/github-portfolio';
+  String email = 'example@example.com';
+  String phoneNum = '+212 645879000';
   int counter = 0;
   @override
   Widget build(BuildContext context) {
@@ -67,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: 20,
                           ),
                           Text(
-                            '+212 645879000',
+                            '$phoneNum',
                             style: TextStyle(
                               fontSize: 20,
                             ),
@@ -106,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: 23,
                           ),
                           Text(
-                            'example@example.com',
+                            '$email',
                             style: TextStyle(
                               fontSize: 20,
                             ),
@@ -145,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             width: 20,
                           ),
                           Text(
-                            'github.com/github-portfolio',
+                            '$githubLink',
                             style: TextStyle(
                               fontSize: 20,
                             ),
