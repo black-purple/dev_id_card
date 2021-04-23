@@ -3,7 +3,7 @@
 
 This is a beginner level Flutter project made to help new Flutter developers grasp the basics of this framework.
 
-## Side Notes
+## About Us
 If you are a Moroccan and you want to learn new things in different fields of programming,
 Consider joining our [Discord Server](https://discord.gg/RwM3NUYRcx) where you can meet programmers and software developpers of different interests and specialties.
 
