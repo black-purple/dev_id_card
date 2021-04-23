@@ -1,16 +1,30 @@
-# dev_id_card
+# Developer ID Card
 
-A new Flutter project.
+This is a beginner level Flutter project made to help new Flutter developers grasp the basics of this framework.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project was made in a live session on a discord server called 'The Coding Gang' TCG for short.
 
-A few resources to get you started if this is your first Flutter project:
+## Flutter Packages Used
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+FontAwesomeIcons were used to enhance the icons library in this simple app.
+The package name is [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## About The App
+
+This app was developped on an Android device(My Phone). 
+No emulators were used in the development process.
+
+## App Preview
+
+
+<img src="dev_id_card_preview.jpg" height="150">
+
+
+
+
+### Side Notes
+If you are a Moroccan and you want to learn new things in different fields of programming,
+Consider joining our [Discord Server](https://discord.gg/UCFpUVBpS) where you can meet programmers and software developpers of different interests and specialties.
+
