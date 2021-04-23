@@ -22,7 +22,6 @@ class _MyHomePageState extends State<MyHomePage> {
   String githubLink = 'black-purple/dev_id_card.git';
   String email = 'example@example.com';
   String phoneNum = '+212 645879000';
-  int counter = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
