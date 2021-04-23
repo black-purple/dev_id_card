@@ -7,10 +7,12 @@ This is a beginner level Flutter project made to help new Flutter developers gra
 If you are a Moroccan and you want to learn new things in different fields of programming,
 Consider joining our [Discord Server](https://discord.gg/RwM3NUYRcx) where you can meet programmers and software developpers of different interests and specialties.
 
+<img src="./readmeImages/TCGlogoNew.png" width="500">
+
 
 ## App Preview
 
-<img src="dev_id_card_preview.jpg" height="500">
+<img src="./readmeImages/dev_id_card_preview.jpg" height="500">
 
 
 ## Getting Started
