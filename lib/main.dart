@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,7 +19,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String githubLink = 'github.com/github-portfolio';
+  String githubLink = 'black-purple/dev_id_card.git';
   String email = 'example@example.com';
   String phoneNum = '+212 645879000';
   int counter = 0;
@@ -62,12 +63,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(10),
                       child: Row(
                         children: [
-                          Icon(Icons.phone),
-                          SizedBox(
-                            width: 20,
+                          Icon(
+                            Icons.phone,
+                            color: Colors.green,
                           ),
                           SizedBox(
-                            width: 20,
+                            width: 45,
                           ),
                           Text(
                             '$phoneNum',
@@ -104,7 +105,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(10),
                       child: Row(
                         children: [
-                          Icon(Icons.mail),
+                          Icon(
+                            Icons.mail,
+                            color: Colors.amber,
+                          ),
                           SizedBox(
                             width: 23,
                           ),
@@ -143,15 +147,18 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(10),
                       child: Row(
                         children: [
-                          Icon(Icons.code),
+                          Icon(FontAwesomeIcons.github),
                           SizedBox(
-                            width: 20,
+                            width: 10,
                           ),
                           Text(
                             '$githubLink',
                             style: TextStyle(
                               fontSize: 20,
                             ),
+                          ),
+                          SizedBox(
+                            width: 10,
                           ),
                         ],
                       ),
@@ -189,13 +196,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   width: 10,
                 ),
-                Text(
-                  'Flutter',
-                  style: TextStyle(
-                    color: Colors.lightBlueAccent,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                  ),
+                Icon(
+                  Icons.favorite,
+                  color: Colors.red,
                 ),
               ],
             ),
