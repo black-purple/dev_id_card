@@ -1,5 +1,7 @@
+import 'package:dev_id_card/TextIconCard.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'TextIconCard.dart';
 
 void main() => runApp(MyApp());
 
@@ -54,127 +56,34 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 //* Container1
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 275,
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.phone,
-                            color: Colors.green,
-                          ),
-                          SizedBox(
-                            width: 45,
-                          ),
-                          Text(
-                            '$phoneNum',
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                          ),
-                        ],
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.blueGrey,
-                            blurRadius: 15,
-                            spreadRadius: 0.1,
-                            offset: Offset.zero,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                TextIconCard(
+                  icon: Icons.phone,
+                  iconColor: Colors.green,
+                  fontSize: 20,
+                  cardText: phoneNum,
+                  afterIcon: 45,
                 ),
                 //* Container2
                 SizedBox(
                   height: 20,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      width: 275,
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.mail,
-                            color: Colors.amber,
-                          ),
-                          SizedBox(
-                            width: 23,
-                          ),
-                          Text(
-                            '$email',
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                          ),
-                        ],
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.blueGrey,
-                            blurRadius: 15,
-                            spreadRadius: 0.1,
-                            offset: Offset.zero,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                TextIconCard(
+                  iconColor: Colors.amber,
+                  cardText: email,
+                  afterIcon: 20,
+                  icon: Icons.mail,
+                  fontSize: 20,
                 ),
                 //* Container3
                 SizedBox(
                   height: 20,
                 ),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: [
-                          Icon(FontAwesomeIcons.github),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(
-                            '$githubLink',
-                            style: TextStyle(
-                              fontSize: 20,
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                        ],
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.blueGrey,
-                            blurRadius: 15,
-                            spreadRadius: 0.1,
-                            offset: Offset.zero,
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                TextIconCard(
+                  iconColor: Color(0xFF443583),
+                  cardText: githubLink,
+                  afterIcon: 18,
+                  icon: FontAwesomeIcons.github,
+                  fontSize: 18,
                 ),
               ],
             ),
