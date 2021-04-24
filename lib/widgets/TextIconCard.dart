@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class TextIconCard extends StatelessWidget {
+class IconTextCard extends StatelessWidget {
   final String cardText;
   final double afterIcon;
   final IconData icon;
   final double fontSize;
   final Color iconColor;
-  TextIconCard({
+  IconTextCard({
     required this.iconColor,
     required this.cardText,
     required this.afterIcon,

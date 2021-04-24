@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:dev_id_card/TextIconCard.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '/widgets/TextIconCard.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -43,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 //* Container1
-                TextIconCard(
+                IconTextCard(
                   icon: Icons.phone,
                   iconColor: Colors.green,
                   fontSize: 20,
@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   height: 20,
                 ),
-                TextIconCard(
+                IconTextCard(
                   iconColor: Colors.amber,
                   cardText: email,
                   afterIcon: 20,
@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   height: 20,
                 ),
-                TextIconCard(
+                IconTextCard(
                   iconColor: Color(0xFF443583),
                   cardText: githubLink,
                   afterIcon: 18,
