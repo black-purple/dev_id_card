@@ -21,10 +21,14 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.teal,
       body: Container(
         child: ListView(children: [
+          SizedBox(
+            height: 10 * (deviceHeight / 100),
+          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
