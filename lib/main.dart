@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
-import './pages/my_home_page.dart';
+import 'pages/home_page.dart';
+import 'pages/qrcode_page.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(DevIdCard());
 
-class MyApp extends StatelessWidget {
+class DevIdCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+      ),
       debugShowCheckedModeBanner: false,
-      home: MyHomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/codePage': (context) => QRPage(),
+      },
     );
   }
 }

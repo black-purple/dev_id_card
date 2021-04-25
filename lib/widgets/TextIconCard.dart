@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import '../konstants.dart';
 
 class IconTextCard extends StatelessWidget {
-  final String cardText;
+  final String? cardText;
   final double afterIcon;
   final IconData icon;
   final double fontSize;
   final Color iconColor;
+
   IconTextCard({
     required this.iconColor,
     required this.cardText,
@@ -44,14 +46,7 @@ class IconTextCard extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
             color: Colors.white,
-            boxShadow: [
-              BoxShadow(
-                color: Colors.blueGrey,
-                blurRadius: 15,
-                spreadRadius: 0.1,
-                offset: Offset.zero,
-              ),
-            ],
+            boxShadow: [kelevation1],
           ),
         ),
       ],
