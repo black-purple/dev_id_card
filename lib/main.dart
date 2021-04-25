@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 import 'pages/qrcode_page.dart';
+import 'pages/input_page.dart';
 
 void main() => runApp(DevIdCard());
 
@@ -15,8 +16,10 @@ class DevIdCard extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
+        '/': (context) => InputPage(),
+        '/homePage': (context) => HomePage(),
         '/codePage': (context) => QRPage(),
+        '/inputPage': (context) => InputPage(),
       },
     );
   }

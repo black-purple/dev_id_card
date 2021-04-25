@@ -1,7 +1,7 @@
 import 'package:dev_id_card/pages/qrcode_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '/widgets/TextIconCard.dart';
+import '../widgets/text_icon_card.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -86,19 +86,20 @@ class _HomePageState extends State<HomePage> {
                 height: 60,
               ),
               IconButton(
-                  onPressed: () {
-                    var route = MaterialPageRoute(
-                      builder: (BuildContext context) => QRPage(
-                        data: contactInfo(),
-                      ),
-                    );
-                    Navigator.of(context).push(route);
-                  },
-                  icon: Icon(
-                    Icons.qr_code,
-                    color: Colors.white,
-                    size: 35,
-                  )),
+                onPressed: () {
+                  var route = MaterialPageRoute(
+                    builder: (BuildContext context) => QRPage(
+                      data: contactInfo(),
+                    ),
+                  );
+                  Navigator.of(context).push(route);
+                },
+                icon: Icon(
+                  Icons.qr_code,
+                  color: Colors.white,
+                  size: 35,
+                ),
+              ),
               SizedBox(
                 height: 20,
               ),
