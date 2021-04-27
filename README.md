@@ -17,7 +17,7 @@ Consider joining our [Discord Server](https://discord.gg/RwM3NUYRcx) where you c
 
 ## Getting Started
 
-This project was made in a live session on a discord server called 'The Coding Gang' TCG for short.
+This project was made in a live session on a discord server called <b style="color=#443583">The Coding Gang</b> TCG for short.
 
 ## Flutter Packages Used
 
