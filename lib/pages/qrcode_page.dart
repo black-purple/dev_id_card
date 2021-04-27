@@ -16,33 +16,48 @@ class QRPage extends StatefulWidget {
 class _QRPageState extends State<QRPage> {
   @override
   Widget build(BuildContext context) {
-    double deviceWidth = MediaQuery.of(context).size.width;
-
     return Scaffold(
-      appBar: AppBar(
-        brightness: Brightness.dark,
-        title: Text('QR code'),
-        backgroundColor: Colors.teal[700],
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        label: Text(
+          'Back',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
+        ),
+        backgroundColor: Colors.black,
+        icon: Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
       ),
       backgroundColor: Colors.teal,
-      body: Container(
-        decoration: BoxDecoration(
-          color: Colors.lightBlue,
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: [kelevation2],
-        ),
-        padding: EdgeInsets.all(3),
-        margin: EdgeInsets.only(
-          top: 20 * (deviceWidth / 100),
-          left: 21 * (deviceWidth / 100),
-        ),
-        child: QrImage(
-          data: "$widget.data",
-          version: QrVersions.auto,
-          size: 200.0,
-          foregroundColor: Colors.white,
-          gapless: false,
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            child: Text('$widget.data'),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.lightBlue,
+              borderRadius: BorderRadius.circular(15),
+              boxShadow: [kelevation2],
+            ),
+            padding: EdgeInsets.all(3),
+            child: QrImage(
+              data: "$widget.text",
+              version: QrVersions.auto,
+              size: 200.0,
+              foregroundColor: Colors.white,
+              gapless: false,
+            ),
+          ),
+        ],
       ),
     );
   }

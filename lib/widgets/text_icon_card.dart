@@ -3,7 +3,7 @@ import '../konstants.dart';
 
 class IconTextCard extends StatelessWidget {
   final String? cardText;
-  final double afterIcon;
+  final double afterIconSpace;
   final IconData icon;
   final double fontSize;
   final Color iconColor;
@@ -11,7 +11,7 @@ class IconTextCard extends StatelessWidget {
   IconTextCard({
     required this.iconColor,
     required this.cardText,
-    required this.afterIcon,
+    required this.afterIconSpace,
     required this.icon,
     required this.fontSize,
   });
@@ -33,7 +33,7 @@ class IconTextCard extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: afterIcon,
+                width: afterIconSpace,
               ),
               Text(
                 '$cardText',
@@ -46,7 +46,9 @@ class IconTextCard extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(5),
             color: Colors.white,
-            boxShadow: [kelevation1],
+            boxShadow: [
+              kelevation1,
+            ],
           ),
         ),
       ],

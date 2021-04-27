@@ -2,32 +2,51 @@ import 'package:dev_id_card/pages/qrcode_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../widgets/text_icon_card.dart';
+import 'package:dev_id_card/konstants.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
+class HomePage extends StatelessWidget {
+  HomePage({
+    required this.phoneNum,
+    required this.email,
+    required this.githubUsername,
+  });
 
-class _HomePageState extends State<HomePage> {
-  String phoneNum = '+212 645879000';
-  String email = 'example@example.com';
-  String githubLink = 'black-purple/dev_id_card.git';
-  String? data;
+  final String phoneNum;
+  final String email;
+  final String githubUsername;
+  String? data = '';
 
   String? contactInfo() {
-    data = 'Phone Number: $phoneNum \n Email: $email \n Github: $githubLink';
+    data =
+        'Phone Number: $phoneNum \n Email: $email \n Github: github.com/$githubUsername';
     return data;
   }
 
   @override
   Widget build(BuildContext context) {
-    double deviceHeight = MediaQuery.of(context).size.height;
     return Scaffold(
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Navigator.pop(context);
+        },
+        label: Text(
+          'Back',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+          ),
+        ),
+        backgroundColor: Colors.black,
+        icon: Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
+      ),
       backgroundColor: Colors.teal,
       body: Container(
         child: ListView(children: [
           SizedBox(
-            height: 10 * (deviceHeight / 100),
+            height: 10 * (deviceHeight(context) / 100),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CircleAvatar(
-                    backgroundImage: AssetImage('images/avatar.png'),
+                    backgroundImage: AssetImage('images/github_logo.png'),
                     maxRadius: 80,
                   ),
                 ],
@@ -57,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                     icon: Icons.phone,
                     iconColor: Colors.green,
                     cardText: phoneNum,
-                    afterIcon: 45,
+                    afterIconSpace: 45,
                     fontSize: 20,
                   ),
                   SizedBox(
@@ -67,8 +86,8 @@ class _HomePageState extends State<HomePage> {
                     icon: Icons.mail,
                     iconColor: Colors.amber,
                     cardText: email,
-                    afterIcon: 20,
-                    fontSize: 20,
+                    afterIconSpace: 20,
+                    fontSize: 17,
                   ),
                   SizedBox(
                     height: 20,
@@ -76,8 +95,8 @@ class _HomePageState extends State<HomePage> {
                   IconTextCard(
                     icon: FontAwesomeIcons.github,
                     iconColor: Color(0xFF443583),
-                    cardText: githubLink,
-                    afterIcon: 18,
+                    cardText: 'github.com/$githubUsername',
+                    afterIconSpace: 18,
                     fontSize: 18,
                   ),
                 ],
@@ -87,12 +106,14 @@ class _HomePageState extends State<HomePage> {
               ),
               IconButton(
                 onPressed: () {
-                  var route = MaterialPageRoute(
-                    builder: (BuildContext context) => QRPage(
-                      data: contactInfo(),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => QRPage(
+                        data: data,
+                      ),
                     ),
                   );
-                  Navigator.of(context).push(route);
                 },
                 icon: Icon(
                   Icons.qr_code,
