@@ -4,10 +4,10 @@
     <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <!-- Show a splash screen on the activity. Automatically removed when
              Flutter draws its first frame -->
-        <item name="android:windowBackground">@drawable/launch_background</item>
+       
         <item name= "android:windowFullscreen">true</item>
-        <color name="red">#FF009688</color>
     </style>
+
     <!-- Theme applied to the Android Window as soon as the process has started.
          This theme determines the color of the Android Window while your
          Flutter UI initializes, as well as behind your Flutter UI while its
@@ -17,4 +17,5 @@
     <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
         <item name="android:windowBackground">?android:colorBackground</item>
     </style>
+        
 </resources>

@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:dev_id_card/konstants.dart';
 import 'package:dev_id_card/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -200,58 +202,40 @@ class _InputPageState extends State<InputPage> {
               SizedBox(
                 height: 8 * (deviceHeight(context) / 100),
               ),
-              GestureDetector(
-                child: Container(
-                  padding: EdgeInsets.all(15),
-                  height: 65,
-                  margin: EdgeInsets.only(
-                    left: 12 * (deviceWidth(context) / 100),
-                    right: 12 * (deviceWidth(context) / 100),
+              SizedBox(
+                width: 70 * (deviceWidth(context) / 100),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(
+                      Colors.white,
+                    ),
                   ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    color: Colors.white,
-                    boxShadow: [
-                      textfieldCheck() ? kglowElevation : knoGlow,
-                    ],
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Create ID Card',
-                            style: TextStyle(
-                              color: Colors.teal,
-                              fontSize: 20,
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.arrow_forward,
-                            size: 35,
+                  onPressed: () {
+                    textfieldCheck();
+                  },
+                  child: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Row(
+                      children: [
+                        Text(
+                          'Create Card',
+                          style: TextStyle(
                             color: Colors.teal,
+                            fontSize: 30,
                           ),
-                        ],
-                      ),
-                    ],
+                        ),
+                        SizedBox(
+                          width: 25,
+                        ),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Colors.teal,
+                          size: 30,
+                        )
+                      ],
+                    ),
                   ),
                 ),
-                onTap: () {
-                  textfieldCheck();
-                },
               ),
               SizedBox(
                 height: 3 * (deviceHeight(context) / 100),
