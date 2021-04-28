@@ -6,7 +6,7 @@
              Flutter draws its first frame -->
         <item name="android:windowBackground">@drawable/launch_background</item>
         <item name= "android:windowFullscreen">true</item>
-        <color name="red">#009688</color>
+        <color name="red">#FF009688</color>
     </style>
     <!-- Theme applied to the Android Window as soon as the process has started.
          This theme determines the color of the Android Window while your
