@@ -87,7 +87,7 @@ class HomePage extends StatelessWidget {
                     iconColor: Colors.amber,
                     cardText: email,
                     afterIconSpace: 20,
-                    fontSize: 12,
+                    fontSize: 15,
                   ),
                   SizedBox(
                     height: 20,

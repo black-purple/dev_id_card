@@ -10,13 +10,13 @@ class InputPage extends StatefulWidget {
   _InputPageState createState() => _InputPageState();
 }
 
+TextEditingController phoneNumController = TextEditingController();
+TextEditingController emailController = TextEditingController();
+TextEditingController githubController = TextEditingController();
+
 class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
-    TextEditingController phoneNumController = TextEditingController();
-    TextEditingController emailController = TextEditingController();
-    TextEditingController githubController = TextEditingController();
-
     bool textfieldCheck() {
       String phoneNum, email, github;
 
@@ -77,6 +77,7 @@ class _InputPageState extends State<InputPage> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextField(
+                  keyboardType: TextInputType.phone,
                   controller: phoneNumController,
                   maxLength: 14,
                   decoration: InputDecoration(
@@ -94,6 +95,17 @@ class _InputPageState extends State<InputPage> {
                     prefixIcon: Icon(
                       Icons.phone,
                       color: Colors.green,
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        Icons.cancel,
+                        color: Colors.redAccent,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          phoneNumController.text = '';
+                        });
+                      },
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
@@ -140,6 +152,17 @@ class _InputPageState extends State<InputPage> {
                       Icons.mail,
                       color: Colors.amber,
                     ),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        Icons.cancel,
+                        color: Colors.redAccent,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          emailController.text = '';
+                        });
+                      },
+                    ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       borderSide: BorderSide(
@@ -166,6 +189,7 @@ class _InputPageState extends State<InputPage> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: TextField(
+                  keyboardType: TextInputType.name,
                   controller: githubController,
                   maxLength: 14,
                   decoration: InputDecoration(
@@ -183,6 +207,17 @@ class _InputPageState extends State<InputPage> {
                     prefixIcon: Icon(
                       FontAwesomeIcons.github,
                       color: Color(0xFF443583),
+                    ),
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        Icons.cancel,
+                        color: Colors.redAccent,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          githubController.text = '';
+                        });
+                      },
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10.0),
