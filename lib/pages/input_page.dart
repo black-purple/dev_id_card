@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:dev_id_card/konstants.dart';
 import 'package:dev_id_card/pages/home_page.dart';
 import 'package:flutter/material.dart';
@@ -235,68 +234,48 @@ class _InputPageState extends State<InputPage> {
                 ),
               ),
               SizedBox(
-                height: 8 * (deviceHeight(context) / 100),
+                height: 10 * (deviceHeight(context) / 100),
               ),
               SizedBox(
-                width: 70 * (deviceWidth(context) / 100),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                      Colors.white,
-                    ),
+                child: IconButton(
+                  iconSize: 60,
+                  icon: Icon(
+                    Icons.arrow_forward,
+                    color: Colors.white,
                   ),
                   onPressed: () {
                     textfieldCheck();
                   },
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Row(
-                      children: [
-                        Text(
-                          'Create Card',
-                          style: TextStyle(
-                            color: Colors.teal,
-                            fontSize: 30,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 25,
-                        ),
-                        Icon(
-                          Icons.arrow_forward,
-                          color: Colors.teal,
-                          size: 30,
-                        )
-                      ],
-                    ),
-                  ),
                 ),
               ),
               SizedBox(
-                height: 3 * (deviceHeight(context) / 100),
+                height: 25,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    width: 220,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      color: Colors.red,
-                    ),
-                    child: Center(
-                      child: Text(
-                        'Please fill all the fields',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                      ),
+                  Text(
+                    'Made with',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20,
                     ),
                   ),
                 ],
               ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.favorite,
+                    color: Colors.red,
+                  ),
+                ],
+              )
             ],
           ),
         ),

@@ -75,7 +75,7 @@ class HomePage extends StatelessWidget {
                     icon: Icons.phone,
                     iconColor: Colors.green,
                     cardText: phoneNum,
-                    afterIconSpace: 45,
+                    afterIconSpace: 30,
                     fontSize: 20,
                   ),
                   SizedBox(
@@ -85,8 +85,8 @@ class HomePage extends StatelessWidget {
                     icon: Icons.mail,
                     iconColor: Colors.amber,
                     cardText: email,
-                    afterIconSpace: 20,
-                    fontSize: 15,
+                    afterIconSpace: email.length.toDouble() <= 24 ? 18 : 16,
+                    fontSize: email.length.toDouble() <= 23 ? 20 : 15,
                   ),
                   SizedBox(
                     height: 20,
@@ -95,59 +95,48 @@ class HomePage extends StatelessWidget {
                     icon: FontAwesomeIcons.github,
                     iconColor: Color(0xFF443583),
                     cardText: 'github.com/$githubUsername',
-                    afterIconSpace: 18,
-                    fontSize: 18,
+                    afterIconSpace:
+                        githubUsername.length.toDouble() <= 13 ? 14 : 18,
+                    fontSize: githubUsername.length.toDouble() <= 13 ? 18 : 13,
                   ),
                 ],
               ),
               SizedBox(
-                height: 60,
+                height: 40,
               ),
-              IconButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => QRPage(
-                        data: contactInfo(phoneNum, email, githubUsername),
-                      ),
-                    ),
-                  );
-                },
-                icon: Icon(
-                  Icons.qr_code,
+              Text(
+                'Check if everything is correct',
+                style: TextStyle(
+                  fontSize: 20,
                   color: Colors.white,
-                  size: 35,
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Made with',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 20,
-                    ),
-                  ),
-                ],
               ),
               SizedBox(
                 height: 10,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.favorite,
-                    color: Colors.red,
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(40),
+                ),
+                child: IconButton(
+                  iconSize: 30,
+                  color: Color(0xFF487eb0),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => QRPage(
+                          data: contactInfo(phoneNum, email, githubUsername),
+                        ),
+                      ),
+                    );
+                  },
+                  icon: Icon(
+                    Icons.qr_code,
                   ),
-                ],
-              )
+                ),
+              ),
             ],
           ),
         ]),

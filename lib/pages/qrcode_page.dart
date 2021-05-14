@@ -37,10 +37,10 @@ class _QRPageState extends State<QRPage> {
       backgroundColor: Colors.teal,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text('$dataText'),
+            SizedBox(
+              height: 10 * (deviceHeight(context) / 100),
+            ),
             Container(
               decoration: BoxDecoration(
                 color: Colors.lightBlue,
@@ -54,6 +54,58 @@ class _QRPageState extends State<QRPage> {
                 size: 200.0,
                 foregroundColor: Colors.white,
                 gapless: false,
+              ),
+            ),
+            SizedBox(
+              height: 5 * (deviceHeight(context) / 100),
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(40),
+                color: Colors.white,
+              ),
+              child: Column(
+                children: [
+                  Text(
+                    'Scan QR Code',
+                    style: TextStyle(fontSize: 30, color: Colors.teal),
+                  ),
+                  SizedBox(
+                    height: 1 * (deviceHeight(context) / 100),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(40),
+                      color: Colors.white,
+                    ),
+                    child: Text(
+                      'Don\'t have a QR code\nscanner on your device?',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 3 * (deviceHeight(context) / 100),
+                  ),
+                  TextButton.icon(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.get_app,
+                      color: Colors.green,
+                      size: 25,
+                    ),
+                    label: Text(
+                      'GET NOW ',
+                      style: TextStyle(
+                        color: Colors.green,
+                        fontSize: 30,
+                      ),
+                    ),
+                  )
+                ],
               ),
             ),
           ],
