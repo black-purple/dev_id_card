@@ -49,7 +49,7 @@ class _QRPageState extends State<QRPage> {
               ),
               padding: EdgeInsets.all(3),
               child: QrImage(
-                data: "${widget.data}",
+                data: "$dataText",
                 version: QrVersions.auto,
                 size: 200.0,
                 foregroundColor: Colors.white,

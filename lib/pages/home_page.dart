@@ -14,11 +14,10 @@ class HomePage extends StatelessWidget {
   final String phoneNum;
   final String email;
   final String githubUsername;
-  String? data = '';
 
-  String? contactInfo() {
-    data =
-        'Phone Number: $phoneNum \n Email: $email \n Github: github.com/$githubUsername';
+  String contactInfo(phoneNum, email, githubUsername) {
+    String data =
+        'Phone Number: $phoneNum \nEmail: $email \nGithub: github.com/$githubUsername';
     return data;
   }
 
@@ -110,7 +109,7 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => QRPage(
-                        data: data,
+                        data: contactInfo(phoneNum, email, githubUsername),
                       ),
                     ),
                   );
