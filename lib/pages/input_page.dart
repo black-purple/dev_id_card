@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:dev_id_card/konstants.dart';
+import 'package:dev_id_card/utilities/konstants.dart';
 import 'package:dev_id_card/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

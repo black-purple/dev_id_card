@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../konstants.dart';
+import '../utilities/konstants.dart';
 
 class IconTextCard extends StatelessWidget {
   final String? cardText;
