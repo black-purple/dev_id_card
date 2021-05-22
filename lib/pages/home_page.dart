@@ -123,8 +123,7 @@ class HomePage extends StatelessWidget {
                   iconSize: 30,
                   color: Color(0xFF487eb0),
                   onPressed: () {
-                    Navigator.push(
-                      context,
+                    Navigator.of(context).push(
                       MaterialPageRoute(
                         builder: (context) => QRPage(
                           data: contactInfo(phoneNum, email, githubUsername),

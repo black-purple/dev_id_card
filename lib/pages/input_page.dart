@@ -26,8 +26,7 @@ class _InputPageState extends State<InputPage> {
       if (phoneNum == '' || email == '' || github == '') {
         return true;
       } else {
-        Navigator.push(
-          context,
+        Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => HomePage(
               phoneNum: phoneNum,
