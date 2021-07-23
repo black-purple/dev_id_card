@@ -1,8 +1,9 @@
 import 'package:dev_id_card/pages/qrcode_page.dart';
+import 'package:dev_id_card/utilities/animated_route.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../widgets/text_icon_card.dart';
-import 'package:dev_id_card/utilities/konstants.dart';
+import 'package:dev_id_card/utilities/constants.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({
@@ -124,11 +125,9 @@ class HomePage extends StatelessWidget {
                   color: Color(0xFF487eb0),
                   onPressed: () {
                     Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => QRPage(
+                      SlideRight(QRPage(
                           data: contactInfo(phoneNum, email, githubUsername),
-                        ),
-                      ),
+                        ),),
                     );
                   },
                   icon: Icon(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'package:dev_id_card/utilities/konstants.dart';
+import 'package:dev_id_card/utilities/constants.dart';
 
 class QRPage extends StatefulWidget {
   final String? data;

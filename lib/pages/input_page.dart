@@ -1,5 +1,6 @@
 import 'dart:ui';
-import 'package:dev_id_card/utilities/konstants.dart';
+import 'package:dev_id_card/utilities/animated_route.dart';
+import 'package:dev_id_card/utilities/constants.dart';
 import 'package:dev_id_card/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -16,7 +17,7 @@ TextEditingController githubController = TextEditingController();
 class _InputPageState extends State<InputPage> {
   @override
   Widget build(BuildContext context) {
-    bool textfieldCheck() {
+    bool textFieldCheck() {
       String phoneNum, email, github;
 
       phoneNum = phoneNumController.text;
@@ -26,15 +27,7 @@ class _InputPageState extends State<InputPage> {
       if (phoneNum == '' || email == '' || github == '') {
         return true;
       } else {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) => HomePage(
-              phoneNum: phoneNum,
-              email: email,
-              githubUsername: github,
-            ),
-          ),
-        );
+        Navigator.of(context).push(SlideRight(HomePage(phoneNum: phoneNum,email: email,githubUsername: github,),),);
         return false;
       }
     }
@@ -243,7 +236,7 @@ class _InputPageState extends State<InputPage> {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    textfieldCheck();
+                    textFieldCheck();
                   },
                 ),
               ),
