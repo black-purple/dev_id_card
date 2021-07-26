@@ -2,7 +2,6 @@ import 'package:dev_id_card/pages/qrcode_page.dart';
 import 'package:dev_id_card/utilities/animated_route.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../widgets/text_icon_card.dart';
 import 'package:dev_id_card/utilities/constants.dart';
 
 class HomePage extends StatelessWidget {
@@ -62,43 +61,48 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(
                 child: Divider(
-                  thickness: 1,
+                  thickness: 2,
                   color: Colors.white,
                 ),
                 height: 50,
-                width: 210,
+                width: 310,
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  IconTextCard(
-                    icon: Icons.phone,
-                    iconColor: Colors.green,
-                    cardText: phoneNum,
-                    afterIconSpace: 30,
-                    fontSize: 20,
+                  Card(
+                    elevation: 5,
+                    margin: EdgeInsets.only(left: 40,right: 40),
+                    child: ListTile(
+                      tileColor: Colors.white,
+                      leading: Icon(Icons.phone, color: Colors.green,),
+                      title: Text('$phoneNum'),
+                    ),
                   ),
                   SizedBox(
                     height: 20,
                   ),
-                  IconTextCard(
-                    icon: Icons.mail,
-                    iconColor: Colors.amber,
-                    cardText: email,
-                    afterIconSpace: email.length.toDouble() <= 24 ? 18 : 16,
-                    fontSize: email.length.toDouble() <= 23 ? 20 : 15,
+                  Card(
+                    elevation: 5,
+                    margin: EdgeInsets.only(left: 40,right: 40),
+                    child: ListTile(
+                      tileColor: Colors.white,
+                      leading: Icon(Icons.mail, color: Colors.amber,),
+                      title: Text('$email'),
+                    ),
                   ),
                   SizedBox(
                     height: 20,
                   ),
-                  IconTextCard(
-                    icon: FontAwesomeIcons.github,
-                    iconColor: Color(0xFF443583),
-                    cardText: 'github.com/$githubUsername',
-                    afterIconSpace:
-                        githubUsername.length.toDouble() <= 13 ? 14 : 18,
-                    fontSize: githubUsername.length.toDouble() <= 13 ? 18 : 13,
+                  Card(
+                    elevation: 5,
+                    margin: EdgeInsets.only(left: 40,right: 40),
+                    child: ListTile(
+                      tileColor: Colors.white,
+                      leading: Icon(FontAwesomeIcons.github, color: Colors.deepPurple,),
+                      title: Text('github.com/$githubUsername'),
+                    ),
                   ),
                 ],
               ),
@@ -113,7 +117,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 40,
               ),
               Container(
                 decoration: BoxDecoration(
